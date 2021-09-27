@@ -1,0 +1,12 @@
+Testcase: edu.umb.cs681.hw1.HW1Test
+Test: StockQuoteObservableTest() took 18 milli sec(s)
+Test: DJIAQuoteObservableTest() took 1 milli sec(s)
+Tests run: 2, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 28 milli sec(s)
+------------- Standard Output ---------------
+Updated Pie Chart Stock Observer -- Stock Name: AAPL Stock Price: 300.0
+Updated Table Stock Observer -- Stock Name: AAPL Stock Price: 300.0
+Updated 3D Stock Observer -- Stock Name: AAPL Stock Price: 300.0
+Updated Pie Chart DJIA Observer -- Quote: 23782.68
+Updated Table DJIA Observer -- Quote: 23782.68
+Updated 3D Chart DJIA Observer -- Quote: 23782.68
+------------- ---------------- ---------------
