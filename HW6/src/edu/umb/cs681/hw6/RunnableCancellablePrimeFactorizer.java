@@ -32,7 +32,7 @@ public class RunnableCancellablePrimeFactorizer extends RunnablePrimeFactorizer 
             lock.lock();
             try {
                 if(done) {
-                    System.out.println("Stopped generating prime factors.");
+                    System.out.println("The Prime Factorizer Stopped running.");
                     break;
                 }
                 if(dividend % divisor == 0) {
@@ -67,7 +67,7 @@ public class RunnableCancellablePrimeFactorizer extends RunnablePrimeFactorizer 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Result: " + gen1.getPrimeFactors() + "\n");
+        System.out.println("Prime factors of 84: " + gen1.getPrimeFactors() + "\n");
 
 
         //stop thread running by calling setDone()
@@ -80,6 +80,6 @@ public class RunnableCancellablePrimeFactorizer extends RunnablePrimeFactorizer 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Result: " + gen2.getPrimeFactors() + "\n");
+        System.out.println("Prime factors of 8633: " + gen2.getPrimeFactors() + "\n");
     }
 }
