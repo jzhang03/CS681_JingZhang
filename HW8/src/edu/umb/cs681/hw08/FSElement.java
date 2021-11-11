@@ -17,14 +17,19 @@ public abstract class FSElement {
     protected static ReentrantLock lock = new ReentrantLock();
 
     public FSElement(Directory parent, String name, int size, LocalDateTime creationTime) {
-        this.name = name;
-        this.size = size;
-        this.creationTime = creationTime;
-        if (parent != null) {
-            parent.appendChild(this);
-        } else {
-            this.parent = null;
-        }
+    	lock.lock();
+    	try {
+    		this.name = name;
+            this.size = size;
+            this.creationTime = creationTime;
+            if (parent != null) {
+                parent.appendChild(this);
+            } else {
+                this.parent = null;
+            }
+    	} finally {
+    		lock.unlock();
+    	}
     }
 
     public void setParent(Directory parent) {
