@@ -28,14 +28,16 @@
 	<target name="compile" depends="init">
 		<javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
 			<classpath refid="classpath"/>
-			<include name="edu/umb/cs681/hw7/*.java"/>
+			<include name="edu/umb/cs681/hw07/*.java"/>
 		</javac>
 	</target>
 	
 	<target name="compileFinish" depends="compile"></target>
 	
 	<target name="clean" depends="compileFinish">
-			<fileset dir="${bin}/edu/umb/cs681/hw7" includes="**/*"/>
+		<delete includeemptydirs="true">
+			<fileset dir="${bin}/edu/umb/cs681/hw07" includes="**/*"/>
+		</delete>
 	</target>
 
 </project>
