@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+	CS681: HW9
+	Copyright 2021 Jing Zhang <Jing.Zhang002@umb.edu>
+	Git Repositories: https://github.com/jzhang03/CS681
+	Git Name: jzhang03
+	To run this build script, type: 
+	ant -f hw.xml
+	on a shell. 
+-->
+
+<project name="RunnableCancellableInterruptiblePrimeFactorizer" basedir="."  default="clean">
+	<property environment="env"/>
+	<echo message="ANT_HOME: ${env.ANT_HOME}" />
+	
+	<property name="src" location="src" />
+	<property name="bin" location="bin" />
+	
+	<path id="classpath">
+		<pathelement location="bin" />
+	</path>
+	<echo message="${toString:classpath}" />
+	
+	<target name="init">
+		<mkdir dir="${bin}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
+			<classpath refid="classpath"/>
+			<include name="edu/umb/cs681/hw09/*.java"/>
+		</javac>
+	</target>
+	
+	<target name="compileFinish" depends="compile"></target>
+	
+	<target name="clean" depends="compileFinish">
+		<delete includeemptydirs="true">
+			<fileset dir="${bin}/edu/umb/cs681/hw09" includes="**/*"/>
+		</delete>
+	</target>
+
+</project>
