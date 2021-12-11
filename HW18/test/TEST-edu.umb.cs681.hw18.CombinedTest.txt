@@ -1,0 +1,5 @@
+Testcase: edu.umb.cs681.hw18.CombinedTest
+Test: countTest() took 20 milli sec(s)
+Test: minTest() took 14 milli sec(s)
+Test: maxTest() took 12 milli sec(s)
+Tests run: 3, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 51 milli sec(s)
